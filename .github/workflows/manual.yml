@@ -56,4 +56,4 @@ jobs:
 
    - name: Terraform Destroy
      if: github.ref == 'refs/heads/main'
-     run: terraform apply tfplan -destroy
+     run: terraform apply -destroy -var-file="dev.tfvars"
